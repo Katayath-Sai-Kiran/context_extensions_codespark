@@ -1,4 +1,4 @@
-# ⚡ context_extensions_codespark
+# context_extensions_codespark
 
 A lightweight Flutter package that provides powerful and convenient `BuildContext` extensions to reduce boilerplate and improve developer productivity.
 
@@ -6,22 +6,22 @@ Built for Flutter developers who want cleaner, more readable code.
 
 ---
 
-## ✨ Features
+## Features
 
-- 📱 Screen & MediaQuery utilities
-- 🎨 Theme & Color shortcuts
-- 🔤 Typography helpers
-- 📏 Responsive sizing utilities
-- 🧭 Navigation extensions
-- 💬 Snackbar helpers
-- 📦 Dialog utilities
-- 🎯 Focus management
-- 🔄 Orientation helpers
-- ⚡ Post-frame callbacks
+* Screen & MediaQuery utilities
+* Theme & Color shortcuts
+* Typography helpers
+* Responsive sizing utilities
+* Navigation extensions
+* Snackbar helpers
+* Dialog utilities
+* Focus management
+* Orientation helpers
+* Post-frame callbacks
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Add the dependency:
 
@@ -30,7 +30,7 @@ dependencies:
   context_extensions_codespark: latest
 ```
 
-Then run:
+Install packages:
 
 ```bash
 flutter pub get
@@ -44,59 +44,59 @@ import 'package:context_extensions_codespark/context_extensions_codespark.dart';
 
 ---
 
-## 📱 Screen Utilities
+## Screen Utilities
 
 ```dart
-context.screenWidth
-context.screenHeight
+context.screenWidth;
+context.screenHeight;
 
-context.isPortrait
-context.isLandscape
+context.isPortrait;
+context.isLandscape;
 
-context.isMobile
-context.isTablet
-context.isDesktop
+context.isMobile;
+context.isTablet;
+context.isDesktop;
 ```
 
 ---
 
-## 📏 Responsive Helpers
+## Responsive Helpers
 
 ```dart
-context.wp(0.8) // 80% width
-context.hp(0.5) // 50% height
+context.wp(0.8); // 80% width
+context.hp(0.5); // 50% height
 ```
 
 ---
 
-## 🎨 Theme Helpers
+## Theme Helpers
 
 ```dart
-context.theme
-context.colorScheme
-context.textTheme
+context.theme;
+context.colorScheme;
+context.textTheme;
 
-context.isDarkMode
-context.isLightMode
+context.isDarkMode;
+context.isLightMode;
 
-context.primaryColor
-context.surfaceColor
-context.backgroundColor
+context.primaryColor;
+context.surfaceColor;
+context.backgroundColor;
 ```
 
 ---
 
-## 🔤 Typography Helpers
+## Typography Helpers
 
 ```dart
-context.titleLarge
-context.bodyMedium
-context.labelSmall
+context.titleLarge;
+context.bodyMedium;
+context.labelSmall;
 ```
 
 ---
 
-## 🧭 Navigation
+## Navigation
 
 ```dart
 context.push(HomePage());
@@ -118,7 +118,7 @@ final result = await context.pushForResult<String>(
 
 ---
 
-## 💬 Snackbars
+## Snackbars
 
 ```dart
 context.showSnackBar('Hello');
@@ -132,7 +132,7 @@ context.showInfo('Profile updated');
 
 ---
 
-## 📦 Dialogs
+## Dialogs
 
 ```dart
 await context.showAlertDialog(
@@ -141,7 +141,7 @@ await context.showAlertDialog(
 );
 ```
 
-Confirmation:
+Confirmation dialog:
 
 ```dart
 final confirmed = await context.showConfirmDialog(
@@ -152,7 +152,7 @@ final confirmed = await context.showConfirmDialog(
 
 ---
 
-## 🎯 Focus Utilities
+## Focus Utilities
 
 ```dart
 context.unfocus();
@@ -160,7 +160,7 @@ context.unfocus();
 
 ---
 
-## ⚡ Post Frame Callback
+## Post Frame Callback
 
 ```dart
 context.onPostFrame(() {
@@ -170,7 +170,7 @@ context.onPostFrame(() {
 
 ---
 
-## 🔄 Orientation Helpers
+## Orientation Helpers
 
 ```dart
 context.valueByOrientation(
@@ -181,14 +181,10 @@ context.valueByOrientation(
 
 ---
 
-## 👨‍💻 Author
+## Additional Packages
 
-K Sai Kiran
+More Flutter utilities are available from K Sai Kiran at:
 
-🌐 https://ksaikiran.dev
+https://ksaikiran.dev
 
 ---
-
-## 📄 License
-
-MIT License
