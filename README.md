@@ -181,10 +181,12 @@ context.valueByOrientation(
 
 ---
 
-## Additional Packages
+## About
 
-More Flutter utilities are available from K Sai Kiran at:
+Maintained by K Sai Kiran.
 
-https://ksaikiran.dev
+Website: https://ksaikiran.dev
+
+Explore more Flutter packages and developer tools at ksaikiran.dev.
 
 ---

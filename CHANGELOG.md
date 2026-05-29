@@ -1,3 +1,11 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+- Initial release.
+- MediaQuery extensions.
+- Device helpers.
+- Theme extensions.
+- Typography shortcuts.
+- Snackbar helpers.
+- Focus helpers.
+- Lifecycle utilities.
+- Orientation helpers.
