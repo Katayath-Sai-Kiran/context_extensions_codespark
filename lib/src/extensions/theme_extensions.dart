@@ -25,12 +25,10 @@ extension ContextThemeExtensions on BuildContext {
   /// The surface color from the color scheme.
   Color get surfaceColor => colorScheme.surface;
 
-  /// The background color from the color scheme (deprecated in Flutter 3.18, use [surface] or [surfaceVariant] instead).
-  ///
-  /// Prefer [surfaceColor] or [surfaceVariantColor] for new code.
-  Color get backgroundColor => colorScheme.background;
-
-  /// The surface variant color from the color scheme.
+  /// The surface variant color from the color scheme (deprecated in Flutter 3.18, use [surfaceTintColor] or [surfaceColor] instead).
+  @Deprecated(
+    'Use surfaceTintColor or surfaceColor instead. Deprecated after Flutter 3.18.',
+  )
   Color get surfaceVariantColor => colorScheme.surfaceVariant;
 
   /// The inverse surface color from the color scheme.
@@ -44,4 +42,34 @@ extension ContextThemeExtensions on BuildContext {
 
   /// The secondary color from the color scheme.
   Color get secondaryColor => colorScheme.secondary;
+
+  /// The onPrimary color from the color scheme.
+  Color get onPrimaryColor => colorScheme.onPrimary;
+
+  /// The onSecondary color from the color scheme.
+  Color get onSecondaryColor => colorScheme.onSecondary;
+
+  /// The onSurface color from the color scheme.
+  Color get onSurfaceColor => colorScheme.onSurface;
+
+  /// The onError color from the color scheme.
+  Color get onErrorColor => colorScheme.onError;
+
+  /// The onBackground color from the color scheme (deprecated in Flutter 3.18, use [onSurfaceColor] instead).
+  Color get onBackgroundColor => colorScheme.onSurface;
+
+  /// The scrim color from the color scheme.
+  Color get scrimColor => colorScheme.scrim;
+
+  /// The shadow color from the color scheme.
+  Color get shadowColor => colorScheme.shadow;
+
+  /// The tertiary color from the color scheme.
+  Color get tertiaryColor => colorScheme.tertiary;
+
+  /// The onTertiary color from the color scheme.
+  Color get onTertiaryColor => colorScheme.onTertiary;
+
+  /// The surface tint color from the color scheme.
+  Color get surfaceTintColor => colorScheme.surfaceTint;
 }
