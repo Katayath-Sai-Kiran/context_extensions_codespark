@@ -1,6 +1,6 @@
 name: context_extensions_codespark
 description: "Powerful and lightweight BuildContext extensions for Flutter. Simplify navigation, responsive layouts, theme access, dialogs, snackbars, and more."
-version: 0.0.1
+version: 0.0.1+patch-deprecated
 homepage: https://ksaikiran.dev/
 repository: https://github.com/Katayath-Sai-Kiran/context_extensions_codespark
 issue_tracker: https://github.com/Katayath-Sai-Kiran/context_extensions_codespark/issues

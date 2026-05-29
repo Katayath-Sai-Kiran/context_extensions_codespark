@@ -9,3 +9,7 @@
 - Focus helpers.
 - Lifecycle utilities.
 - Orientation helpers.
+
+## 0.0.1+patch-deprecated
+
+- Fixed depriceted background property on ColorScheme
