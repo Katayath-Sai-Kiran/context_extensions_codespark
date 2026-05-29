@@ -22,9 +22,6 @@ extension ContextMediaQueryExtensions on BuildContext {
   /// The device pixel ratio.
   double get devicePixelRatio => MediaQuery.of(this).devicePixelRatio;
 
-  /// The text scale factor (deprecated in Flutter 3.12, use [textScaler] for nonlinear scaling).
-  double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
-
   /// The text scaler for nonlinear text scaling (Flutter 3.12+).
   TextScaler get textScaler => MediaQuery.of(this).textScaler;
 
