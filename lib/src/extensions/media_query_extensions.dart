@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// Extensions for accessing MediaQuery properties from BuildContext.
 ///
