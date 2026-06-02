@@ -4,7 +4,24 @@ A lightweight Flutter package that provides powerful and convenient `BuildContex
 
 Built for Flutter developers who want cleaner, more readable code.
 
----
+## Screenshots
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/context_extentions.png" alt="Context Extensions Overview" width="300"/>
+</p>
+
+| Screen & MediaQuery | Device & Platform | Theme & Colors | Typography |
+|:---:|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/screen_mediaquery.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/device_and_platform.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/theme_colors.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/typography.png" width="180"/> |
+
+| Snackbars | | | |
+|:---:|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_1.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_2.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_3.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_4.png" width="180"/> |
+
+| Dialogs | | | Orientation |
+|:---:|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_1.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_2.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_3.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/orientations.png" width="180"/> |
+
 
 ## Features
 

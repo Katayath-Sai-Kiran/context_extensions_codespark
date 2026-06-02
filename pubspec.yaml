@@ -23,6 +23,24 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+screenshots:
+  - description: "Context Extensions Overview"
+    path: assets/context_extentions.png
+  - description: "Screen & MediaQuery extensions"
+    path: assets/screen_mediaquery.png
+  - description: "Device & Platform detection"
+    path: assets/device_and_platform.png
+  - description: "Theme & Color shortcuts"
+    path: assets/theme_colors.png
+  - description: "Typography helpers"
+    path: assets/typography.png
+  - description: "Snackbar helpers"
+    path: assets/snackbar_1.png
+  - description: "Dialog utilities"
+    path: assets/dialog_1.png
+  - description: "Orientation helpers"
+    path: assets/orientations.png
+
 topics:
   - flutter
   - extensions
