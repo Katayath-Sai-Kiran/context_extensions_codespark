@@ -13,9 +13,8 @@
   <a href="https://github.com/Katayath-Sai-Kiran/context_extensions_codespark/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/Katayath-Sai-Kiran/context_extensions_codespark" alt="license"/>
   </a>
-  <a href="https://github.com/Katayath-Sai-Kiran/context_extensions_codespark">
-    <img src="https://img.shields.io/github/stars/Katayath-Sai-Kiran/context_extensions_codespark?style=social" alt="GitHub stars"/>
-  </a>
+  <img src="https://img.shields.io/badge/platform-flutter-02569B?logo=flutter" alt="platform flutter"/>
+  <img src="https://img.shields.io/badge/BuildContext-utilities-blueviolet" alt="BuildContext utilities"/>
 </p>
 
 <p align="center">
