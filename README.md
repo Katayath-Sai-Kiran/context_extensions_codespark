@@ -1,8 +1,32 @@
 # context_extensions_codespark
 
-A lightweight Flutter package that provides powerful and convenient `BuildContext` extensions to reduce boilerplate and improve developer productivity.
+<p align="center">
+  <a href="https://pub.dev/packages/context_extensions_codespark">
+    <img src="https://img.shields.io/pub/v/context_extensions_codespark.svg" alt="pub version"/>
+  </a>
+  <a href="https://pub.dev/packages/context_extensions_codespark/score">
+    <img src="https://img.shields.io/pub/points/context_extensions_codespark" alt="pub points"/>
+  </a>
+  <a href="https://pub.dev/packages/context_extensions_codespark/score">
+    <img src="https://img.shields.io/pub/likes/context_extensions_codespark" alt="pub likes"/>
+  </a>
+  <a href="https://github.com/Katayath-Sai-Kiran/context_extensions_codespark/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Katayath-Sai-Kiran/context_extensions_codespark" alt="license"/>
+  </a>
+  <a href="https://github.com/Katayath-Sai-Kiran/context_extensions_codespark">
+    <img src="https://img.shields.io/github/stars/Katayath-Sai-Kiran/context_extensions_codespark?style=social" alt="GitHub stars"/>
+  </a>
+</p>
 
-Built for Flutter developers who want cleaner, more readable code.
+<p align="center">
+  A lightweight Flutter package that provides powerful and convenient <code>BuildContext</code> extensions to reduce boilerplate and improve developer productivity.
+</p>
+
+<p align="center">
+  Built by <a href="https://ksaikiran.dev">Katayath Sai Kiran</a> · <a href="https://github.com/Katayath-Sai-Kiran">@Katayath-Sai-Kiran</a>
+</p>
+
+---
 
 ## Screenshots
 
