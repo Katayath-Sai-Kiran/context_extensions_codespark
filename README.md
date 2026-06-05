@@ -28,10 +28,6 @@ A lightweight Flutter package that provides BuildContext extensions, MediaQuery 
 
 ## Screenshots
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/context_extentions.png" alt="Context Extensions Overview" width="320"/>
-</p>
-
 | Screen & MediaQuery | Device & Platform | Orientation |
 |:---:|:---:|:---:|
 | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/screen_mediaquery.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/device_and_platform.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/orientations.png" width="200"/> |
@@ -67,35 +63,22 @@ Build responsive and adaptive Flutter UIs using simple BuildContext extensions.
 - Responsive layouts
 - Screen size utilities
 
-## Perfect For
+## Perfect For &amp; Common Use Cases
 
-- BuildContext extensions
-- MediaQuery shortcuts
-- Responsive Flutter layouts
-- Adaptive UI development
-- Snackbar helpers
-- Dialog helpers
-- Theme access shortcuts
-- Typography utilities
-- Keyboard management
-- Platform detection
-- Flutter productivity
-- Reducing boilerplate code
-
-## Common Use Cases
-
-- Flutter responsive design
-- MediaQuery replacements
-- Adaptive layouts
-- Context-based utilities
-- Snackbar management
-- Dialog management
-- Theme access
-- Typography access
-- Keyboard dismissal
-- Platform detection
-- Screen size calculations
-- Safe area calculations
+| 🎯 Perfect For | 💡 Common Use Cases |
+|---|---|
+| BuildContext extensions | Flutter responsive design |
+| MediaQuery shortcuts | MediaQuery replacements |
+| Responsive Flutter layouts | Adaptive layouts |
+| Adaptive UI development | Context-based utilities |
+| Snackbar helpers | Snackbar management |
+| Dialog helpers | Dialog management |
+| Theme access shortcuts | Theme access |
+| Typography utilities | Typography access |
+| Keyboard management | Keyboard dismissal |
+| Platform detection | Platform detection |
+| Flutter productivity | Screen size calculations |
+| Reducing boilerplate code | Safe area calculations |
 
 
 ## Installation

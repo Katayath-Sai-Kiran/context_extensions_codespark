@@ -1,3 +1,9 @@
+## 1.4.0
+
+### README
+- Merged "Perfect For" and "Common Use Cases" sections into a single side-by-side two-column table for better scannability and reduced scroll length
+
+
 ## 1.3.0
 
 ### New — Navigation Extensions (`ContextNavigationExtensions`)
@@ -5,12 +11,15 @@
 - `context.pop([result])` — shorthand for `Navigator.of(context).pop(result)`
 - `context.pushNamed(name, {arguments})` — shorthand for `Navigator.of(context).pushNamed(...)`
 - `context.pushReplacement(route)` — replaces the current route
+- `context.pushReplacementNamed(name)` — named variant of `pushReplacement`
 - `context.pushAndRemoveUntil(route, predicate)` — clears stack and pushes new route
+- `context.popUntil(predicate)` — pops routes until predicate is met
 - `context.popUntilFirst()` — pops all routes back to the root
+- `context.maybePop()` — safe pop, no-op if nothing to pop
 - `context.canPop` — returns `true` if there is a route to pop
 
 ### README
-- Removed redundant screenshots: `snackbar_2`, `snackbar_4`, `typography`, `dialog_1` (alert), `dialog_3` (custom), `theme_colors`
+- Removed redundant screenshots: `snackbar_2`, `snackbar_4`, `typography`, `dialog_1`, `dialog_3`, `theme_colors`
 - Rearranged screenshots into clean 3-column tables: Screen/Device/Orientation and Snackbars/Dialogs
 - Added Navigation Extensions section with before/after examples and common use cases
 
