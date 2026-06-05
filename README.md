@@ -1,6 +1,14 @@
 # context_extensions_codespark
 
 <p align="center">
+A lightweight Flutter package that provides BuildContext extensions, MediaQuery helpers, responsive design utilities, snackbar helpers, dialog helpers, theme shortcuts, typography utilities, keyboard management, and platform detection to reduce boilerplate and improve developer productivity.
+</p>
+
+<p align="center">
+  Built by <a href="https://ksaikiran.dev">Katayath Sai Kiran</a> · <a href="https://github.com/Katayath-Sai-Kiran">@Katayath-Sai-Kiran</a>
+</p>
+
+<p align="center">
   <a href="https://pub.dev/packages/context_extensions_codespark">
     <img src="https://img.shields.io/pub/v/context_extensions_codespark.svg" alt="pub version"/>
   </a>
@@ -17,21 +25,38 @@
   <img src="https://img.shields.io/badge/BuildContext-utilities-blueviolet" alt="BuildContext utilities"/>
 </p>
 
-<p align="center">
-  A lightweight Flutter package that provides powerful and convenient <code>BuildContext</code> extensions to reduce boilerplate and improve developer productivity.
-</p>
+## Perfect For
 
-<p align="center">
-  Built by <a href="https://ksaikiran.dev">Katayath Sai Kiran</a> · <a href="https://github.com/Katayath-Sai-Kiran">@Katayath-Sai-Kiran</a>
-</p>
+- BuildContext extensions
+- MediaQuery shortcuts
+- Responsive Flutter layouts
+- Adaptive UI development
+- Snackbar helpers
+- Dialog helpers
+- Theme access shortcuts
+- Typography utilities
+- Keyboard management
+- Platform detection
+- Flutter productivity
+- Reducing boilerplate code
 
----
+## Common Use Cases
+
+- Flutter responsive design
+- MediaQuery replacements
+- Adaptive layouts
+- Context-based utilities
+- Snackbar management
+- Dialog management
+- Theme access
+- Typography access
+- Keyboard dismissal
+- Platform detection
+- Screen size calculations
+- Safe area calculations
 
 ## Screenshots
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/context_extentions.png" alt="Context Extensions Overview" width="300"/>
-</p>
 
 | Screen & MediaQuery | Device & Platform | Theme & Colors | Typography |
 |:---:|:---:|:---:|:---:|
@@ -59,7 +84,18 @@
 - Post-frame callbacks with mount safety
 - Platform detection (web-safe)
 
----
+
+## Flutter Responsive Design
+
+Build responsive and adaptive Flutter UIs using simple BuildContext extensions.
+
+- Device breakpoints
+- Window size classes
+- Orientation helpers
+- Adaptive typography
+- Responsive layouts
+- Screen size utilities
+
 
 ## Installation
 
@@ -76,9 +112,8 @@ flutter pub get
 import 'package:context_extensions_codespark/context_extensions_codespark.dart';
 ```
 
----
 
-## Screen & MediaQuery
+## MediaQuery Extensions & Screen Size Helpers
 
 **Without package:**
 ```dart
@@ -108,9 +143,8 @@ context.viewPadding
 context.statusBarHeight
 ```
 
----
 
-## Device & Responsive Helpers
+## Responsive Design & Device Helpers
 
 Based on [Material Design 3 Window Size Classes](https://m3.material.io/foundations/layout/applying-layout/window-size-classes).
 
@@ -178,9 +212,9 @@ if (context.isTouchDevice) { ... }    // Android || iOS || Fuchsia
 if (context.isPointerDevice) { ... }  // macOS || Windows || Linux || Web
 ```
 
----
 
-## Theme & Colors
+
+## Theme Extensions & Color Shortcuts
 
 **Without package:**
 ```dart
@@ -212,7 +246,6 @@ context.inverseSurfaceColor
 context.surfaceTintColor
 ```
 
----
 
 ## Typography
 
@@ -283,9 +316,8 @@ final style = context.adaptiveStyle(
 );
 ```
 
----
 
-## Snackbars
+## Snackbar Helpers & Context Snackbar Extensions
 
 **Without package:**
 ```dart
@@ -322,9 +354,8 @@ context.showSuccess(
 );
 ```
 
----
 
-## Dialogs
+## Dialog Helpers & Context Dialog Extensions
 
 ### Alert dialog
 
@@ -429,7 +460,6 @@ await context.showCustomDialog(
 );
 ```
 
----
 
 ## Focus & Keyboard
 
@@ -470,7 +500,6 @@ TextField(
 ),
 ```
 
----
 
 ## Post-Frame Callbacks
 
@@ -540,7 +569,6 @@ context.onPostFrameIfMounted(() {
 });
 ```
 
----
 
 ## Orientation Helpers
 
@@ -580,7 +608,6 @@ Widget build(BuildContext context) {
 }
 ```
 
----
 
 ## About
 
@@ -588,4 +615,4 @@ Maintained by Katayath Sai Kiran.
 
 Website: [ksaikiran.dev](https://ksaikiran.dev)
 
----
+

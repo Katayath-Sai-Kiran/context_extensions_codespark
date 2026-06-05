@@ -1,6 +1,6 @@
 name: context_extensions_codespark
-description: "Powerful and lightweight BuildContext extensions for Flutter. Simplify navigation, responsive layouts, theme access, dialogs, snackbars, and more."
-version: 1.1.0
+description: "BuildContext extensions for Flutter with MediaQuery helpers, responsive design utilities, snackbar and dialog helpers, theme shortcuts, typography, keyboard, and platform detection."
+version: 1.2.0
 homepage: https://ksaikiran.dev/
 repository: https://github.com/Katayath-Sai-Kiran/context_extensions_codespark
 issue_tracker: https://github.com/Katayath-Sai-Kiran/context_extensions_codespark/issues
@@ -11,7 +11,7 @@ environment:
   sdk: ^3.8.0
   flutter: ">=1.17.0"
 
-dependencies:
+dependencies: 
   flutter:
     sdk: flutter
 
@@ -42,11 +42,11 @@ screenshots:
     path: assets/orientations.png
 
 topics:
-  - flutter
-  - extensions
   - buildcontext
-  - responsive
-  - navigation
+  - responsive-design
+  - flutter-extensions
+  - mediaquery
+  - flutter-utils
 
 # The following section is specific to Flutter packages.
 flutter:

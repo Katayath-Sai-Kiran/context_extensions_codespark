@@ -1,70 +1,108 @@
+## 1.2.0
+
+### SEO & Package Discoverability
+- Added `topics` to `pubspec.yaml` for better pub.dev search indexing:
+  `buildcontext`, `responsive-design`, `flutter-extensions`, `mediaquery`, `flutter-utils`
+- Added `homepage`, `repository`, and `issue_tracker` fields to `pubspec.yaml`
+- Improved `description` in `pubspec.yaml` — more keyword-rich and within pub.dev's recommended character range
+- Added `screenshots:` section in `pubspec.yaml` — pub.dev now displays 8 screenshots on the package page
+
+### README
+- Added shields.io badges: pub version, pub points, pub likes, license, platform, package category
+- Added centered author credit — Built with ❤️ by [Katayath Sai Kiran](https://ksaikiran.dev)
+- Added screenshots gallery (table layout) placed after badges and before Installation — optimal position for first-time visitors
+- Replaced GitHub stars badge with more relevant `platform: flutter` and `BuildContext utilities` badges
+
+### Documentation
+- Added reusable prompt for applying badges, screenshots, author credit, and CHANGELOG updates to any Flutter package
+
+---
+
 ## 1.1.0
 
-### Documentation & Presentation
-- Rewrote README with **before/after** code comparisons for every extension category.
-- Added screenshots gallery covering all 8 extension categories (Screen, Device, Theme, Typography, Snackbars, Dialogs, Orientation, Overview).
-- Added badges: pub version, pub points, pub likes, license, Flutter platform, BuildContext utilities.
-- Added author credit with links to website and GitHub profile.
-- Added `screenshots:` section to `pubspec.yaml` for pub.dev package page display.
-- Added doc comments with source references (M3 spec, Flutter API docs, Android density guide, iOS HIG).
+### New — Focus Extensions
+- `nextFocus()` — moves focus to the next widget (equivalent to Tab key)
+- `previousFocus()` — moves focus to the previous widget (Shift+Tab)
+- `requestFocus(node)` — programmatically focuses a specific `FocusNode`
+- `focusScopeNode` — returns the nearest `FocusScopeNode`
+- `isScopeFocused` — true if any child of the nearest scope is focused
+- `hasAnyFocus` — true if any widget in the app is currently focused
+- `primaryFocusNode` — returns the globally focused `FocusNode`, or null
 
-### Focus & Keyboard
-- Extended `ContextFocusExtensions` with `nextFocus()`, `previousFocus()`, `requestFocus(node)`.
-- Added `focusScopeNode`, `isScopeFocused`, `hasAnyFocus`, `primaryFocusNode` getters.
+### New — Typography Extensions
+- `fontScale` — current system font scale factor (e.g. `1.0`, `1.5`)
+- `scaled(style)` — applies current `TextScaler` to a given `TextStyle`
+- `adaptiveStyle(mobile:, desktop:)` — returns different styles based on screen width
 
-### Typography
-- Extended `ContextTypographyExtensions` with `fontScale`, `scaled(style)`, `adaptiveStyle(mobile:, desktop:)`.
-- All style getters return a safe `TextStyle()` fallback — never null, never throws.
+### New — Lifecycle Extensions
+- `onPostFrames(count, callback)` — waits `n` frames before running callback
+- `isContextMounted` — named accessor for `context.mounted`
+- `ifMounted(callback)` — runs callback only if context is still mounted
+- `onPostFrameIfMounted(callback)` — combines post-frame + mounted check (safest async pattern)
 
-### Lifecycle
-- Extended `ContextLifecycleExtensions` with `onPostFrames(count, callback)` for multi-frame delays.
-- Added `isContextMounted` getter (wraps `BuildContext.mounted`).
-- Added `ifMounted(callback)` — safe async-gap guard.
-- Added `onPostFrameIfMounted(callback)` — post-frame + mount safety combined.
+### New — Breakpoints (`context_breakpoints.dart`)
+- Extracted `ContextBreakpointExtensions` into `context_breakpoints.dart` alongside `ContextBreakpoints` constants
+- Added `isExpanded` — width 840–1199 dp (M3 Expanded window size class)
+- Added `isExtraLarge` — width >= 1600 dp (M3 Extra Large window size class)
+- All 5 M3 window size classes now covered: Compact, Medium, Expanded, Large, ExtraLarge
+- Source reference added: [m3.material.io/foundations/layout/applying-layout/window-size-classes](https://m3.material.io/foundations/layout/applying-layout/window-size-classes)
 
-### Device & Breakpoints
-- Moved all window-size-class getters (`isMobile`, `isTablet`, `isExpanded`, `isDesktop`, `isExtraLarge`) into `ContextBreakpointExtensions` in `context_breakpoints.dart`.
-- `ContextBreakpoints` constants now covers all 5 M3 size classes with proper start/end bounds.
-- Added `isHighDensityDisplay`, `hasNotch`, `hasHomeIndicator` display hints (all via MediaQuery — no platform API needed).
-- Added `isFuchsia`, `isNativeMobile`, `isNativeDesktop`, `isTouchDevice`, `isPointerDevice` platform helpers.
+### New — Device Extensions
+- `isHighDensityDisplay` — `devicePixelRatio > 2.0` (source: Flutter `MediaQueryData` docs)
+- `hasNotch` — `safeTop > 24.0` (source: iOS HIG safe areas)
+- `hasHomeIndicator` — `safeBottom > 0.0` (source: iOS HIG home indicator)
+- `isNativeMobile` — `isAndroid || isIOS`
+- `isNativeDesktop` — `isMacOS || isWindows || isLinux`
+- `isTouchDevice` — Android / iOS / Fuchsia (same grouping Flutter uses internally)
+- `isPointerDevice` — macOS / Windows / Linux / web
+- `isFuchsia` — guarded with `kIsWeb`
 
-### Theme
-- Added `@Deprecated` annotations to `surfaceVariantColor` and `onBackgroundColor` with replacement guidance.
+### Improved — Theme Extensions
+- Removed `surfaceVariantColor` (deprecated in Flutter 3.18) — replaced with `surfaceTintColor`
+- Marked `backgroundColor` and `onBackgroundColor` as `@Deprecated` with migration guidance
+- Added `onPrimaryColor`, `onSecondaryColor`, `onSurfaceColor`, `onErrorColor`, `scrimColor`, `shadowColor`, `tertiaryColor`, `onTertiaryColor`, `outlineColor`, `inverseSurfaceColor`
 
 ### Code Quality
-- Removed redundant `import 'package:flutter/widgets.dart'` from `media_query_extensions.dart`.
-- All files pass `dart analyze` with zero issues.
+- Fixed `unnecessary_library_name` analyzer warning in barrel file
+- Replaced deprecated `textScaleFactor` with `textScaler`
+- Replaced deprecated `colorScheme.background` with `colorScheme.surface`
+- All platform-specific getters (`isAndroid`, `isIOS`, etc.) guarded with `kIsWeb`
+- `dart analyze` — zero issues
 
 ---
 
 ## 1.0.0
 
-- Added dialog extensions: `showAlertDialog`, `showConfirmDialog`, `showLoadingDialog`, `showCustomDialog`, `hideDialog`.
-- Snackbar methods now accept `duration`, `action`, `backgroundColor`, `textColor`, and `behavior` parameters.
-- Added platform detection helpers: `isAndroid`, `isIOS`, `isWeb`, `isMacOS`, `isWindows`, `isLinux` — all web-safe via `kIsWeb` guard.
-- Added `textScaler`, `orientation`, `platformBrightness`, `devicePixelRatio` MediaQuery properties.
-- Added full ColorScheme color helpers: `onPrimaryColor`, `onSecondaryColor`, `onSurfaceColor`, `onErrorColor`, `tertiaryColor`, `onTertiaryColor`, `surfaceTintColor`, `scrimColor`, `shadowColor`, `inverseSurfaceColor`.
-- Deprecated `backgroundColor` (use `surfaceColor`) and `onBackgroundColor` (use `onSurfaceColor`) per Flutter 3.18.
-- Deprecated `surfaceVariantColor` (use `surfaceTintColor`) per Flutter 3.18.
-- Removed unnecessary `library` directive from barrel file.
-- Updated README with real-world examples for all extensions.
+### Initial Release
 
----
+#### MediaQuery Extensions (`ContextMediaQueryExtensions`)
+- `width`, `height`, `safeTop`, `safeBottom`, `safeLeft`, `safeRight`
+- `bottomInset`, `padding`, `viewPadding`, `devicePixelRatio`
+- `platformBrightness`, `textScaler`, `alwaysUse24HourFormat`
+- `disableAnimations`, `invertColors`, `accessibleNavigation`, `boldText`
 
-## 0.0.1+patch-deprecated
+#### Device & Responsive (`ContextBreakpointExtensions`)
+- `isMobile`, `isTablet`, `isDesktop` using `ContextBreakpoints` constants
 
-- Fixed deprecated `background` property on `ColorScheme`.
+#### Theme Extensions (`ContextThemeExtensions`)
+- `theme`, `colorScheme`, `isDarkMode`, `isLightMode`
+- `primaryColor`, `secondaryColor`, `surfaceColor`, `errorColor`, `outlineColor`
 
----
+#### Typography Extensions (`ContextTypographyExtensions`)
+- All 15 Material text styles: `displayLarge` → `labelSmall`
+- Null-safe fallback — returns `TextStyle()` instead of forcing `!`
 
-## 0.0.1
+#### Snackbar Extensions (`ContextSnackbarExtensions`)
+- `showSnackBar`, `showSuccess`, `showError`, `showInfo`, `hideCurrentSnackBar`
 
-- Initial release.
-- MediaQuery extensions.
-- Device helpers.
-- Theme extensions.
-- Typography shortcuts.
-- Snackbar helpers.
-- Focus helpers.
-- Lifecycle utilities.
-- Orientation helpers.
+#### Dialog Extensions (`ContextDialogExtensions`)
+- `showAlertDialog`, `showConfirmDialog`, `showLoadingDialog`, `showCustomDialog`, `hideDialog`
+
+#### Focus Extensions (`ContextFocusExtensions`)
+- `unfocus`, `nextFocus`, `hasPrimaryFocus`, `isFocused`
+
+#### Lifecycle Extensions (`ContextLifecycleExtensions`)
+- `onPostFrame(callback)`
+
+#### Orientation Extensions (`ContextOrientationExtensions`)
+- `isPortrait`, `isLandscape`, `orientation`, `valueByOrientation`
