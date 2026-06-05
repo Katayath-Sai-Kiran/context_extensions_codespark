@@ -1,3 +1,20 @@
+## 1.3.0
+
+### New — Navigation Extensions (`ContextNavigationExtensions`)
+- `context.push(route)` — shorthand for `Navigator.of(context).push(route)`
+- `context.pop([result])` — shorthand for `Navigator.of(context).pop(result)`
+- `context.pushNamed(name, {arguments})` — shorthand for `Navigator.of(context).pushNamed(...)`
+- `context.pushReplacement(route)` — replaces the current route
+- `context.pushAndRemoveUntil(route, predicate)` — clears stack and pushes new route
+- `context.popUntilFirst()` — pops all routes back to the root
+- `context.canPop` — returns `true` if there is a route to pop
+
+### README
+- Removed redundant screenshots: `snackbar_2`, `snackbar_4`, `typography`, `dialog_1` (alert), `dialog_3` (custom), `theme_colors`
+- Rearranged screenshots into clean 3-column tables: Screen/Device/Orientation and Snackbars/Dialogs
+- Added Navigation Extensions section with before/after examples and common use cases
+
+
 ## 1.2.0
 
 ### SEO & Package Discoverability
@@ -16,7 +33,6 @@
 ### Documentation
 - Added reusable prompt for applying badges, screenshots, author credit, and CHANGELOG updates to any Flutter package
 
----
 
 ## 1.1.0
 
@@ -69,7 +85,6 @@
 - All platform-specific getters (`isAndroid`, `isIOS`, etc.) guarded with `kIsWeb`
 - `dart analyze` — zero issues
 
----
 
 ## 1.0.0
 

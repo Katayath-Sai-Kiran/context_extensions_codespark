@@ -25,6 +25,48 @@ A lightweight Flutter package that provides BuildContext extensions, MediaQuery 
   <img src="https://img.shields.io/badge/BuildContext-utilities-blueviolet" alt="BuildContext utilities"/>
 </p>
 
+
+## Screenshots
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/context_extentions.png" alt="Context Extensions Overview" width="320"/>
+</p>
+
+| Screen & MediaQuery | Device & Platform | Orientation |
+|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/screen_mediaquery.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/device_and_platform.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/orientations.png" width="200"/> |
+
+| Snackbars | | Dialogs |
+|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_1.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_3.png" width="200"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_2.png" width="200"/> |
+
+
+## Features
+
+- Screen & MediaQuery utilities
+- Theme & Color shortcuts
+- Typography helpers with adaptive sizing
+- Responsive device helpers (M3 window size classes)
+- Snackbar helpers (with full customization)
+- Dialog utilities (alert, confirm, loading, custom)
+- Focus & keyboard management
+- Orientation helpers
+- Post-frame callbacks with mount safety
+- Platform detection (web-safe)
+- **Navigation shortcuts** *(new in 1.3.0)*
+
+
+## Flutter Responsive Design
+
+Build responsive and adaptive Flutter UIs using simple BuildContext extensions.
+
+- Device breakpoints
+- Window size classes
+- Orientation helpers
+- Adaptive typography
+- Responsive layouts
+- Screen size utilities
+
 ## Perfect For
 
 - BuildContext extensions
@@ -54,47 +96,6 @@ A lightweight Flutter package that provides BuildContext extensions, MediaQuery 
 - Platform detection
 - Screen size calculations
 - Safe area calculations
-
-## Screenshots
-
-
-| Screen & MediaQuery | Device & Platform | Theme & Colors | Typography |
-|:---:|:---:|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/screen_mediaquery.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/device_and_platform.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/theme_colors.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/typography.png" width="180"/> |
-
-| Snackbars | | | |
-|:---:|:---:|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_1.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_2.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_3.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/snackbar_4.png" width="180"/> |
-
-| Dialogs | | | Orientation |
-|:---:|:---:|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_1.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_2.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/dialog_3.png" width="180"/> | <img src="https://raw.githubusercontent.com/Katayath-Sai-Kiran/context_extensions_codespark/master/assets/orientations.png" width="180"/> |
-
-
-## Features
-
-- Screen & MediaQuery utilities
-- Theme & Color shortcuts
-- Typography helpers with adaptive sizing
-- Responsive device helpers (M3 window size classes)
-- Snackbar helpers (with full customization)
-- Dialog utilities (alert, confirm, loading, custom)
-- Focus & keyboard management
-- Orientation helpers
-- Post-frame callbacks with mount safety
-- Platform detection (web-safe)
-
-
-## Flutter Responsive Design
-
-Build responsive and adaptive Flutter UIs using simple BuildContext extensions.
-
-- Device breakpoints
-- Window size classes
-- Orientation helpers
-- Adaptive typography
-- Responsive layouts
-- Screen size utilities
 
 
 ## Installation
@@ -606,6 +607,59 @@ Widget build(BuildContext context) {
     ),
   );
 }
+```
+
+
+## Navigation Extensions *(new in 1.3.0)*
+
+Clean shorthand for the most common `Navigator` calls — no more `Navigator.of(context)` boilerplate.
+
+**Without package:**
+```dart
+Navigator.of(context).push(MaterialPageRoute(builder: (_) => DetailsPage()));
+Navigator.of(context).pop();
+Navigator.of(context).pushNamed('/home', arguments: {'id': 1});
+Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));
+Navigator.of(context).pushAndRemoveUntil(
+  MaterialPageRoute(builder: (_) => LoginPage()),
+  (route) => false,
+);
+final canGoBack = Navigator.of(context).canPop();
+```
+
+**With package:**
+```dart
+context.push(MaterialPageRoute(builder: (_) => DetailsPage()));
+context.pop();
+context.pop('result');               // pop with a return value
+context.pushNamed('/home', arguments: {'id': 1});
+context.pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));
+context.pushAndRemoveUntil(
+  MaterialPageRoute(builder: (_) => LoginPage()),
+  (route) => false,
+);
+context.popUntilFirst();             // pops all routes back to root
+context.canPop                       // true if there's a route to pop
+```
+
+**Typical use — go to a page and come back:**
+```dart
+// Go forward
+context.push(MaterialPageRoute(builder: (_) => SettingsPage()));
+
+// Go back with a result
+final result = await context.push<String>(
+  MaterialPageRoute(builder: (_) => PickerPage()),
+);
+
+// Replace current route (e.g. after login)
+context.pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));
+
+// Clear the whole stack and go to login (e.g. logout)
+context.pushAndRemoveUntil(
+  MaterialPageRoute(builder: (_) => LoginPage()),
+  (route) => false,
+);
 ```
 
 

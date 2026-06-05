@@ -8,3 +8,4 @@ export 'src/extensions/dialog_extensions.dart';
 export 'src/extensions/focus_extensions.dart';
 export 'src/extensions/lifecycle_extensions.dart';
 export 'src/extensions/orientation_extensions.dart';
+export 'src/extensions/navigation_extensions.dart';
